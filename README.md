@@ -22,5 +22,8 @@ of `examples/css-layout/app.js` with the contents of `main.js` (from this repo).
 Copy the rest of the files in this repo into the same folder as above and update paths inside `index.html`
 as appropriate.
 
+### License
+
+MIT Licensed.
 
 **Note: I am not affiliated with Rotten Tomatoes.**
