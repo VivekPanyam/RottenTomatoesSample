@@ -1,11 +1,12 @@
 # Rotten Tomatoes App using React Canvas
 
-I prototyped this site to try React Canvas and test scroll performance.
-It's an app that displays the top 50 rentals on Rotten Tomatoes.
-It is heavily based on the css-layout and ListView examples in React Canvas.
+I built this app to try React Canvas and test scroll performance.
+It's heavily based on the css-layout and ListView examples in React Canvas.
 Please note that I didn't spend a ton of time on this so it may have some issues. I welcome pull requests!
 
-The app looks like this:
+Demo: http://vivekpanyam.com/samples/reactcanvas
+
+The app looks like this (it displays the top 50 rentals on Rotten Tomatoes):
 
 ![Screenshot](http://i.imgur.com/t4VhXiL.png)
 
