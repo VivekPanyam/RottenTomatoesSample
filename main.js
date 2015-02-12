@@ -2,6 +2,7 @@
 
 var React = require('react');
 var ReactCanvas = require('react-canvas');
+var ImageCache = require('react-canvas/lib/ImageCache');
 
 var Surface = ReactCanvas.Surface;
 var Group = ReactCanvas.Group;
@@ -28,8 +29,8 @@ var Item = React.createClass({
     return (
       <Group style={this.getPageStyle()}>
         <Image src={this.props.movie.img} style={this.getImageStyle()} fadeIn={true} />
-        <Image src="gradient1.png" style={this.getGradientStyle()} fadeIn={true} />  
-        <Group style={this.getDescriptionStyle()}>
+        <Image src="gradient1.png" style={this.getGradientStyle()} fadeIn={true} useBackingStore={true} />
+        <Group style={this.getDescriptionStyle()} useBackingStore={true}>
           <Text style={this.getTitleStyle()}>{this.props.movie.title}</Text>
           <Text style={this.getTextStyle()}>({this.props.movie.year})</Text>
 
@@ -146,8 +147,10 @@ var App = React.createClass({
           numberOfItemsGetter={this.getNumberOfPages}
           itemHeightGetter={this.getPageHeight}
           itemGetter={this.renderPage} />
-        <Image src="gradient2.png" style={this.getGradientStyle()} fadeIn={true} />  
-        <Image src="http://d3biamo577v4eu.cloudfront.net/static/images/trademark/rottentomatoes_logo_40.png" style={this.getLogoStyle()} fadeIn={true} />
+        <Group style={this.getListViewStyle()} useBackingStore={true}>
+          <Image src="gradient2.png" style={this.getGradientStyle()} fadeIn={true} />
+          <Image src="http://d3biamo577v4eu.cloudfront.net/static/images/trademark/rottentomatoes_logo_40.png" style={this.getLogoStyle()} fadeIn={true} />
+        </Group>
       </Surface>
     );
   },
@@ -226,7 +229,7 @@ $.getJSON( "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals
 
       // Naive preloading
       if (i < 10) {
-        $('<img/>')[0].src = m.posters.original.replace("_tmb", "_800");
+        ImageCache.get(m.posters.original.replace("_tmb", "_800"));
       }
     }
 

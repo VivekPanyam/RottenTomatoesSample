@@ -1,0 +1,16 @@
+{
+  "name": "RottenTomatoesSample",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production ./node_modules/.bin/webpack-dev-server --progress --colors"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.7.0",
+    "react": "^0.13.0-beta.1",
+    "react-canvas": "0.0.1"
+  }
+}
