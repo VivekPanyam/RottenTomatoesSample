@@ -6,6 +6,8 @@ Please note that I didn't spend a ton of time on this so it may have some issues
 
 Demo: http://vivekpanyam.com/samples/reactcanvas
 
+It works best on mobile. Try adding it to your homescreen to remove the browser's UI chrome.
+
 The app looks like this (it displays the top 50 rentals on Rotten Tomatoes):
 
 ![Screenshot](http://i.imgur.com/t4VhXiL.png)
